@@ -1,9 +1,10 @@
 // Question 1
-       //To get age of User  
+// Create a JavaScript application that will take date input from user and display how old they are.
+
+        //for input   
 // let year=eval(prompt("Enter your year of birth"))
 // console.log(dates.getFullYear())
-
-
+          //To get age of User
 // dates=new Date()
 // let age = dates.getFullYear()-year
 // console.log("You are " + age + " years old")
