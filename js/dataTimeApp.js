@@ -52,9 +52,42 @@
 
 
 
+
 // Question 3
 
-current = new Date;
-// console.log(current);
-expiringDate = new Date;
-// console.log(expiringDate)
+
+
+let countDown = new Date ("September 15, 2021 12:00:00")
+
+// To update per second
+let count = setInterval(function(){
+//Get current time
+let currentDate = new Date().getTime();
+// distance between countDown date & time and current date & time
+let difference = countDown - currentDate
+
+// to get time remaining days
+
+// get days
+let days = Math.floor(difference/(1000*60*60*24))
+// console.log(days)
+
+// get hours
+ let hours = Math.floor(difference/(1000*60*60*24))/(1000*60*24)
+//  console.log (hours)
+
+// get minutes
+let Minutes = Math.floor(difference/(1000*60*60))/(1000*60)
+
+// get seconds
+let Seconds = Math.floor(difference/(1000*60))/(1000)
+})
+
+//  if (difference>=24)
+ if (hours>=24){
+       console.log("You have exceeded grace period, your Provide Help order has been redirected to another Participant")
+ } else{
+       console.log( `You have ${days} days ${ hours} hours ${Minutes} minutes ${Seconds} seconds left`)
+ }
+
+
